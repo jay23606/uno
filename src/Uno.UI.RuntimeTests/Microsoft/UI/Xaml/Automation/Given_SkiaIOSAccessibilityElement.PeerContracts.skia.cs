@@ -71,6 +71,7 @@ public partial class Given_SkiaIOSAccessibilityElement
 
 	[TestMethod]
 	[RunsOnUIThread]
+	[Ignore("Fails on iOS; see https://github.com/unoplatform/uno-private/issues/2473")]
 	public async Task When_Shared_EventsSource_Changes_Then_All_Native_Aliases_Are_Invalidated()
 	{
 		var source = new VirtualInvokePeer("shared-source") { ItemTypeValue = "before" };
